@@ -1,0 +1,101 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #87ceeb;
+  color: #000;
+  display: flex;
+  height: 100vh;
+}
+.container {
+  background-color: #eee;
+  border-radius: 8px;
+  display: flex;flex-direction: column;
+  margin: auto;
+  width: 300px;
+  height: 200px;
+}
+
+.title {
+  border-radius: 8px 8px 0 0;
+  font-size: 32px;
+  text-align: center;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  border-radius: 34px;
+  display: inline-block;
+  margin: auto;
+  position: relative;
+  width: 120px;
+  height: 60px;
+}
+
+.toggle-switch input {
+  border: 1px solid purple;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Toggle Slider */
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #38285c;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/* Toggle Slider Input */
+input:checked + .toggle-slider {
+  background-color: #87ceeb;
+}
+
+input:focus + .toggle-slider {
+  box-shadow: 0 0 1px #87ceeb;
+}
+
+/* Toggle Slider Button */
+.toggle-slider:before {
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 50px;
+  width: 50px;
+  left: 4px;
+  /* color: #ffe87c; */
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/* Toggle Slider Button Transition */
+input:checked + .toggle-slider:before {
+  box-shadow: 14px 6px 0px 0px #fff;
+  background-color: transparent; 
+  -webkit-transform: translateX(46px);
+  bottom: 10px;
+  -ms-transform: translateX(46px);
+  transform: translateX(46px);
+}
+
+/* Round */
+.round {
+  border-radius: 34px;
+}
+
+/* THEMES */
+.dark-theme {
+  background-color: #38285c;
+}
